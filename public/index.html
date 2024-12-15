@@ -44,16 +44,16 @@
 		</style>
 		<title>Radi</title>
 		<script>
-			if (localStorage.getItem("flags") == null) {
+			if (localStorage.getItem("flags") == null ) {
 				localStorage.setItem("flags", JSON.stringify({
 					OOBE_WENT: true,
 			})) // sysflags init before oobe
-			location.href = "/oobe/"
+			location.href = "/oobe.html"
 			}
 		</script>
 	</head>
 	<body>
 		<div id="app_container" class="appcontainer"></div>
-		<script src="/onstartup/init.js"></script>
+		<script src="/onstartup/init.js" type="module"></script>
 	</body>
 </html>

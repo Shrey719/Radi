@@ -7,9 +7,11 @@ await fslib.setFS("fs", "fs", "rootfs", JSON.stringify({
     bin: [
         {
             isSymlink: true,
+            name: "Shell",
             symlinkType: "realfile",
             executable: "true",
             type: "file",
+            img: "/img/sh.png",
             target: "/jsx/sh.js"
         },
         {
@@ -17,6 +19,8 @@ await fslib.setFS("fs", "fs", "rootfs", JSON.stringify({
             type: "file",
             symlinkType: "realfile",
             target: "/jsx/uv.js",
+            img: "/img/uv.png",
+            name: "Ultravoilet",
             executable: "true",
         },
         
@@ -24,7 +28,9 @@ await fslib.setFS("fs", "fs", "rootfs", JSON.stringify({
             isSymlink: true,
             symlinkType: "real",
             type: "file",
-            target: "/jsx/uv.js",
+            name: "Settings",
+            img: "/img/settings.png",
+            target: "/jsx/Settings.js",
             executable: "true",
         }],
     sbin: [],
@@ -48,12 +54,12 @@ await fslib.setFS("fs", "fs", "rootfs", JSON.stringify({
 
 console.log("Created rootfs");
 
-let rootfs = await fslib.getFS("fs", "fs", "rootfs");
+let rootfs = await fslib.getFS();
 
-console.log(JSON.parse(rootfs.value));
+console.log(JSON.parse(rootfs));
 
 let flags = JSON.parse(localStorage.getItem("flags"))
 flags.OOBE_WENT = true
 
 localStorage.setItem("flags", JSON.stringify(flags));
-location.href = "/"
+//location.href = "/"
