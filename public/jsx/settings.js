@@ -1,3 +1,5 @@
+// no its not real JSX, im not insane
+
 function renderSettings() {
     document.getElementById("app_container")
     const appContainer = document.getElementById("app_container");
@@ -105,4 +107,3 @@ function DisplayUV() {
 	`
 }
 
-renderSettings()
