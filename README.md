@@ -1,6 +1,6 @@
 # Radi
-Radi is a lightweight (unless you boot up v86 lol) webos 
+Radi is a lightweight (unless you boot up /sh.html) webos 
 
 # Todo 
-- Fix persistance on /linux.html 
+- Finish /sh.html (TOP PRIORITY) 
 - Make other pages 
